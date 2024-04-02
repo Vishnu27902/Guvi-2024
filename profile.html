@@ -1,49 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/profile.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.6.4.js"
-      integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
-      crossorigin="anonymous"
-    ></script>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <script src="./js/profile.js"></script>
-    <title>Profile</title>
-  </head>
-  <body>
-      <div class="container">
-        <h1>Profile</h1>
-        <p>User Details</p>
-        <div class="details">
-            <h4><b>Username</b></h4>
-            <div class="data">
-                <p class="content" id="username"></p>
-            </div>
-        </div>
-        <div class="details">
-            <h4><b>Password</b></h4>
-            <div class="data">
-                <p class="content" id="password"></p>
-            </div>
-        </div>
-        <div class="details">
-            <h4><b>Mailid</b></h4>
-            <div class="data">
-                <p class="content" id="mailid"></p>
-            </div>
-        </div>
-        <div class="details">
-            <h4><b>Phone Number</b></h4>
-            <div class="data">
-                <p class="content" id="phnumber"></p>
-            </div>
-        </div>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/profile.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+		/>
+		<script
+			src="https://code.jquery.com/jquery-3.6.4.js"
+			integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+			crossorigin="anonymous"
+		></script>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<script defer src="./js/profile.js"></script>
+		<title>Profile</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Profile</h1>
+			<p>User Details</p>
+			<div class="details">
+				<h4><b>Username</b></h4>
+				<input
+					placeholder="Enter username"
+					class="content"
+					id="username"
+				/>
+				<p style="display: none" id="username-msg">Invalid User Name</p>
+			</div>
+			<div class="details">
+				<h4><b>Mailid</b></h4>
+				<input
+					placeholder="Enter mailid"
+					class="content disabled"
+					id="mailid"
+					disabled
+				/>
+				<p class="info">Can't be changed</p>
+			</div>
+			<div class="details">
+				<h4><b>Phone Number</b></h4>
+				<input
+					disabled
+					placeholder="Enter ph. no."
+					class="content disabled"
+					id="phnumber"
+				/>
+				<p class="info">Can't be changed</p>
+			</div>
+			<div class="details">
+				<h4><b>Age </b><span class="info">(optional)</span></h4>
+				<input
+					placeholder="Enter age"
+					class="content"
+					id="age"
+					type="number"
+				/>
+				<p style="display: none" id="age-msg">Invalid age</p>
+			</div>
+
+			<div class="details">
+				<h4>
+					<b>Secondary Contact Number </b
+					><span class="info">(optional)</span>
+				</h4>
+				<input
+					placeholder="Enter sec. ph. no."
+					class="content"
+					id="secphnumber"
+					type="number"
+				/>
+				<p style="display: none" id="ph-num-msg">
+					Invalid Phone Number
+				</p>
+			</div>
+			<div
+				style="
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				"
+			>
+				<button id="submit">Update</button>
+			</div>
+			<p style="display: none" id="overall-context">
+				Fill the above details
+			</p>
+		</div>
+	</body>
 </html>

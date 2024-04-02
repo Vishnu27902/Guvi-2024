@@ -3,6 +3,11 @@
 body {
 	font-family: Montserrat, Arial, Helvetica, sans-serif;
 	background-color: #f7f7f7;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 * {
 	box-sizing: border-box;
@@ -10,38 +15,67 @@ body {
 
 .container {
 	padding: 20px;
-  max-width: 500px;
-	min-width: 300px;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
+	min-width: 400px;
+	max-width: 600px;
 	border: 1px solid #ccc;
 	border-radius: 10px;
 	background: white;
-	max-height: 600px;
 	-webkit-box-shadow: 2px 1px 21px -9px rgba(0, 0, 0, 0.38);
 	-moz-box-shadow: 2px 1px 21px -9px rgba(0, 0, 0, 0.38);
 	box-shadow: 2px 1px 21px -9px rgba(0, 0, 0, 0.38);
-	/* overflow-y: scroll; */
 }
 
-.data {
-	height: 40px;
-	background-color: rgb(183, 180, 180);
-	border-radius: 20px;
+input{
+	font-size:medium;
+	width: 100%;
+	height: 30px;
+	border-radius: 10px;
+	border: 1px solid gray;
 }
 
-.content {
-	color: black;
-	font-weight: 500;
-	position: relative;
-	top: 25%;
-	left: 15px;
+input:focus{
+	outline: #0eb7f4;
+	border: 2px solid blue;
 }
 
 @media screen and (max-width: 300px) {
 	.signupbtn {
 		width: 100%;
 	}
+}
+
+button {
+	background-color: #0eb7f4;
+	color: white;
+	padding: 14px 20px;
+	margin: 20px 0px;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0.9;
+	font-size: 16px;
+	font-family: Montserrat, Arial, Helvetica, sans-serif;
+	border-radius: 10px;
+}
+
+button:hover {
+	opacity: 1;
+}
+
+.disabled{
+	background-color: lightgray;
+}
+
+.error{
+	display: block !important;
+	color: red;
+	font-size: 15px;
+	font-weight: 100;
+	font-family: cursive;
+}
+
+.info{
+	font-size: 15px;
+	font-weight: 100;
+	font-family: cursive;
 }
